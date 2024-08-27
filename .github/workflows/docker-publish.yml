@@ -40,7 +40,8 @@ jobs:
         uses: actions/checkout@v4
   
   # lancer les tests unitaires, api, fonctionnel
-  
+
+  # que dockerfile
       - name: Login to docker hub
         uses: actions-hub/docker/login@master
         env:
@@ -49,11 +50,9 @@ jobs:
 
       - name: Build :latest
         run: docker build -t ludiformation/demojsaction:latest .
-
+      # a repeter autant de fois que l'on a d'image de créer  
       - name: Push to docker hub :latest
         uses: actions-hub/docker@master
         with:
           args: push ludiformation/demojsaction:latest
-
-
    
