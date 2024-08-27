@@ -52,7 +52,7 @@ jobs:
       - name: Push to docker hub :latest
         uses: actions-hub/docker@master
         with:
-          args: docker push ludiformation/demojsaction:latest
+          args: push ludiformation/demojsaction:latest
 
 
    
